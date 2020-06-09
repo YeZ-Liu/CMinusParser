@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b841520-5b9f-4f59-be0e-e9593c020f5d" name="Default Changelist" comment="" />
+    <list default="true" id="9b841520-5b9f-4f59-be0e-e9593c020f5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functional.go" beforeDir="false" afterPath="$PROJECT_DIR$/functional.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/globals.go" beforeDir="false" afterPath="$PROJECT_DIR$/globals.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanner.go" beforeDir="false" afterPath="$PROJECT_DIR$/scanner.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +39,13 @@
     </option>
   </component>
   <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1bfNmU4p22AHI0RNXzVb1Gexwty" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -40,7 +53,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
@@ -61,6 +76,10 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="223" y="102" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1536.834@0.30.1536.834" timestamp="1589527311097" />
+    <state x="372" y="39" key="CommitChangelistDialog2" timestamp="1591712629566">
+      <screen x="0" y="30" width="1536" height="834" />
+    </state>
+    <state x="372" y="39" key="CommitChangelistDialog2/0.30.1536.834@0.30.1536.834" timestamp="1591712629566" />
     <state x="549" y="202" key="FileChooserDialogImpl" timestamp="1591702031204">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
@@ -73,6 +92,10 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.30.1536.834@0.30.1536.834" timestamp="1591696416581" />
+    <state x="562" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591712581475">
+      <screen x="0" y="30" width="1536" height="834" />
+    </state>
+    <state x="562" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1536.834@0.30.1536.834" timestamp="1591712581475" />
     <state x="431" y="186" width="672" height="678" key="search.everywhere.popup" timestamp="1591706421010">
       <screen x="0" y="30" width="1536" height="834" />
     </state>

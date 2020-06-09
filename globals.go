@@ -9,15 +9,12 @@ package scan
 import "os"
 
 var (
-	FileOut *os.File		// 输出的文件指针
+	FileOut *os.File // 输出的文件指针
 
-
-	BufferConst *Buffer 	// 输入缓冲区
-	ScannerConst *Scanner	// 词法扫描器
-	ParserConst *Parser		// 语法分析器
+	BufferConst  *Buffer  // 输入缓冲区
+	ScannerConst *Scanner // 词法扫描器
+	ParserConst  *Parser  // 语法分析器
 )
-
-
 
 // 符号表
 // 扫描阶段即可开始设置其中的一些值

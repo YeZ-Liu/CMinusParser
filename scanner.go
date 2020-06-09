@@ -12,14 +12,13 @@ import (
 
 // 词法分析器类
 type Scanner struct {
-	KeyTable map[string]Token  // 关键字表
-	buffer *Buffer             // 输入缓冲区
-
+	KeyTable map[string]Token // 关键字表
+	buffer   *Buffer          // 输入缓冲区
 
 }
 
 // 初始化关键字表
-func (scanner *Scanner) initKeyTable()  {
+func (scanner *Scanner) initKeyTable() {
 	scanner.KeyTable = make(map[string]Token, 6)
 	scanner.KeyTable["if"] = IF
 	scanner.KeyTable["else"] = ELSE
@@ -30,10 +29,10 @@ func (scanner *Scanner) initKeyTable()  {
 }
 
 /**
-	判断ID token 是够为关键字
-	如果是,则返回对应的关键字类型
-	否则,返回ID
- */
+判断ID token 是够为关键字
+如果是,则返回对应的关键字类型
+否则,返回ID
+*/
 func (scanner *Scanner) idToken(s string) Token {
 	if token, ok := scanner.KeyTable[s]; ok {
 		return token
@@ -43,13 +42,12 @@ func (scanner *Scanner) idToken(s string) Token {
 
 // 词法分析器类工厂函数
 // 参数为输入文件缓冲区
-func NewScanner(buf *Buffer) *Scanner  {
+func NewScanner(buf *Buffer) *Scanner {
 	var scanner Scanner
 	scanner.buffer = buf   // 初始化输入缓冲区
-	scanner.initKeyTable()  // 初始化关键字表
+	scanner.initKeyTable() // 初始化关键字表
 	return &scanner
 }
-
 
 // 从输入缓冲中扫描token,返回Token类型和Token的词素
 func (scanner *Scanner) getToken() (Token, TokenString) {
@@ -230,7 +228,7 @@ func (scanner *Scanner) getToken() (Token, TokenString) {
 }
 
 // 只进行词法扫描
-func (scanner *Scanner) ScanAll()  {
+func (scanner *Scanner) ScanAll() {
 	// 获取token和词素并打印
 	for token, tokenString := scanner.getToken(); token != EOF_TOKEN; token, tokenString = scanner.getToken() {
 		HelpPrintFile(token, tokenString, scanner.buffer.Lines(), FileOut)
