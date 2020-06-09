@@ -13,6 +13,7 @@ var (
 	v, V bool
 	h    bool
 	s, p bool
+	c  bool
 )
 
 func init() {
@@ -21,13 +22,15 @@ func init() {
 	flag.BoolVar(&V, "V", false, "版本信息")
 	flag.BoolVar(&s, "s", false, "词法分析")
 	flag.BoolVar(&p, "p", false, "语法分析")
+	flag.BoolVar(&c, "c", false, "标准输出")
+
 	flag.StringVar(&f, "f", "", "`filename`")
 	flag.Usage = usage
 }
 
 func usage() {
 	fmt.Fprintf(os.Stderr, `CMinusParser version: CMinusParser/1.0.1
-Usage: CMinusParser [-hvVsp] [-f filename]
+Usage: CMinusParser [-hvV] -sp -f filename
 
 Options:
 `)
@@ -68,7 +71,7 @@ func main() {
 	//fmt.Println(dir)  // C:/Users/lzff1/Desktop/
 
 
-	newName := dir + "out_" + name
+	newName := dir + "CMinusParserOut.txt"
 
 	// 先将文件删除
 	err = os.Remove(newName)
@@ -76,12 +79,18 @@ func main() {
 		// 删除失败不需要提示
 	}
 
-	// 新建一个文件
-	scan.FileOut, err = os.OpenFile(newName, os.O_CREATE|os.O_APPEND, 0777)
-	if err != nil {
-		fmt.Println("输出文件创建失败!")
-		return
+	// 输出到标准输出
+	if c {
+		scan.FileOut = os.Stdout
+	} else {
+		// 新建一个文件作为输入
+		scan.FileOut, err = os.OpenFile(newName, os.O_CREATE|os.O_APPEND, 0777)
+		if err != nil {
+			fmt.Println("输出文件创建失败!")
+			return
+		}
 	}
+
 
 	// 初始化缓冲区
 	scan.BufferConst = scan.NewBuffer(filename)
@@ -96,5 +105,7 @@ func main() {
 		// 只进行词法分析
 		scan.ScannerConst = scan.NewScanner(scan.BufferConst)
 		scan.ScannerConst.ScanAll()
+	} else {
+		flag.Usage()
 	}
 }
