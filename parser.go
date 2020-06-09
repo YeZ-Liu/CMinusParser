@@ -577,7 +577,9 @@ func (parser *Parser) args() *ASTNode {
 // 利用递归下降法生成抽象语法树
 func (parser *Parser) Parse() (*ASTNode, *SymbolTableNode) {
 	// 获取第一个token
-	for parser.aheadToken, parser.lexeme = parser.scanner.getToken(); parser.aheadToken == COMMENT; parser.aheadToken, parser.lexeme = parser.scanner.getToken() {
+	for parser.aheadToken, parser.lexeme = parser.scanner.getToken(); parser.aheadToken == COMMENT || parser.aheadToken == ERROR; parser.aheadToken, parser.lexeme = parser.scanner.getToken() {
+		// 将词法打印到文件
+		HelpPrintFile(parser.aheadToken, parser.lexeme, parser.buffer.Lines(), FileOut)
 	}
 
 	// 初始化当前符号表
@@ -601,9 +603,12 @@ func (parser *Parser) match(t Token) {
 		} else if t == L_PARE_L {
 			MoveDown()
 		}
+		HelpPrintFile(parser.aheadToken, parser.lexeme, parser.buffer.Lines(), FileOut)
 
 		// 获取下一个token,将注释token和错误token过滤
 		for parser.aheadToken, parser.lexeme = parser.scanner.getToken(); parser.aheadToken == COMMENT || parser.aheadToken == ERROR; parser.aheadToken, parser.lexeme = parser.scanner.getToken() {
+			// 将词法打印到文件
+			HelpPrintFile(parser.aheadToken, parser.lexeme, parser.buffer.Lines(), FileOut)
 		}
 	} else {
 		parser.syntaxError()
@@ -615,5 +620,6 @@ func (parser *Parser) syntaxError() {
 	fmt.Printf("%s: [%d]. Token [%d]\n", "Syntax Error in Line", parser.buffer.Lines(), parser.aheadToken)
 	// 获取下一个token,将注释token和错误token过滤
 	for parser.aheadToken, parser.lexeme = parser.scanner.getToken(); parser.aheadToken == COMMENT || parser.aheadToken == ERROR; parser.aheadToken, parser.lexeme = parser.scanner.getToken() {
+		HelpPrintFile(parser.aheadToken, parser.lexeme, parser.buffer.Lines(), FileOut)
 	}
 }

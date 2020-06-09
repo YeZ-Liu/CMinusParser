@@ -69,26 +69,10 @@ func HelpPrintNode(root *ASTNode, file *os.File) {
 		case VAR_DECLARATION:
 			fmt.Fprint(file, "([VAR_DECLARATION] ")
 			fmt.Fprintf(file, "ID:%s; ", string(root.attribute.(TokenString)))
-			//switch root.varT {
-			//case VAR_TYPE_VOID:
-			//	fmt.Fprint(file,"Type: void; ")
-			//case VAR_TYPE_INT:
-			//	fmt.Fprint(file,"Type: int; ")
-			//case VAR_TYPE_INT_VECTOR:
-			//	fmt.Fprint(file,"Type: int[]; ")
-			//}
 			fmt.Fprint(file, ")")
 		case FUNC_DECLARATION:
 			fmt.Fprint(file, "([FUNC_DECLARATION]  ")
 			fmt.Fprintf(file, "ID:%s; ", string(root.attribute.(TokenString)))
-			//switch root.varT {
-			//case VAR_TYPE_VOID:
-			//	fmt.Fprint(file,"Return type: void")
-			//case VAR_TYPE_INT:
-			//	fmt.Fprint(file,"Return type: int")
-			//case VAR_TYPE_INT_VECTOR:
-			//	fmt.Fprint(file,"Return type: int[]")
-			//}
 			fmt.Fprint(file, ")")
 		case COMPOUND:
 			fmt.Fprint(file, "([COMPOUND] ")
@@ -147,14 +131,6 @@ func HelpPrintNode(root *ASTNode, file *os.File) {
 	case PARAM:
 		fmt.Fprint(file, "([PARAM] ")
 		fmt.Fprintf(file, "ID:%s; ", string(root.attribute.(TokenString)))
-		//switch root.varT {
-		//case VAR_TYPE_VOID:
-		//	fmt.Fprint(file,"Type: void")
-		//case VAR_TYPE_INT:
-		//	fmt.Fprint(file,"Type: int")
-		//case VAR_TYPE_INT_VECTOR:
-		//	fmt.Fprint(file,"Type: int[]")
-		//}
 		fmt.Fprint(file, ")")
 	case TYPE:
 		fmt.Fprint(file, "([TYPE] ")
@@ -213,7 +189,7 @@ func HelpPrintTable(root *SymbolTableNode, sp int, c byte, file *os.File) {
 			fmt.Fprintf(file, "%c", c)
 		}
 		fmt.Fprintf(file, "line: %d ", val.line)
-		fmt.Fprint(file, "(", key, ")")
+		fmt.Fprintln(file, "(", key, ")")
 	}
 
 	if root.next != nil {

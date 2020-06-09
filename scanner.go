@@ -7,6 +7,7 @@
 package scan
 
 import (
+	"fmt"
 	"unicode"
 )
 
@@ -220,10 +221,6 @@ func (scanner *Scanner) getToken() (Token, TokenString) {
 		token = scanner.idToken(string(lexeme))
 	}
 
-	// 调用辅助函数打印结果
-	//HelpPrint(token, lexeme, scanner.buffer.Lines())
-	HelpPrintFile(token, lexeme, scanner.buffer.Lines(), FileOut)
-
 	return token, lexeme
 }
 
@@ -233,4 +230,5 @@ func (scanner *Scanner) ScanAll() {
 	for token, tokenString := scanner.getToken(); token != EOF_TOKEN; token, tokenString = scanner.getToken() {
 		HelpPrintFile(token, tokenString, scanner.buffer.Lines(), FileOut)
 	}
+	fmt.Println("Scanner Done!")
 }

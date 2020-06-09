@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b841520-5b9f-4f59-be0e-e9593c020f5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Scan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scan.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functional.go" beforeDir="false" afterPath="$PROJECT_DIR$/functional.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/globals.go" beforeDir="false" afterPath="$PROJECT_DIR$/globals.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser.go" beforeDir="false" afterPath="$PROJECT_DIR$/parser.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scanner.go" beforeDir="false" afterPath="$PROJECT_DIR$/scanner.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,11 +62,38 @@
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../scanmain.go" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../main.go" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="scan" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/" />
+      <package value="Scan" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="scan" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="Scan" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加一个主函数处理命令行参数" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加一个主函数处理命令行参数" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="106" key="#GOROOT" timestamp="1589019369656">
@@ -76,14 +104,14 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="223" y="102" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1536.834@0.30.1536.834" timestamp="1589527311097" />
-    <state x="372" y="39" key="CommitChangelistDialog2" timestamp="1591712629566">
+    <state x="372" y="39" key="CommitChangelistDialog2" timestamp="1591712657665">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state x="372" y="39" key="CommitChangelistDialog2/0.30.1536.834@0.30.1536.834" timestamp="1591712629566" />
-    <state x="549" y="202" key="FileChooserDialogImpl" timestamp="1591702031204">
+    <state x="372" y="39" key="CommitChangelistDialog2/0.30.1536.834@0.30.1536.834" timestamp="1591712657665" />
+    <state x="549" y="202" key="FileChooserDialogImpl" timestamp="1591713642159">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state x="549" y="202" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1591702031204" />
+    <state x="549" y="202" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1591713642159" />
     <state x="270" y="89" key="SettingsEditor" timestamp="1591696835626">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
@@ -92,13 +120,17 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.30.1536.834@0.30.1536.834" timestamp="1591696416581" />
+    <state x="361" y="180" key="Vcs.Push.Dialog.v2" timestamp="1591712674567">
+      <screen x="0" y="30" width="1536" height="834" />
+    </state>
+    <state x="361" y="180" key="Vcs.Push.Dialog.v2/0.30.1536.834@0.30.1536.834" timestamp="1591712674567" />
     <state x="562" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591712581475">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="562" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1536.834@0.30.1536.834" timestamp="1591712581475" />
-    <state x="431" y="186" width="672" height="678" key="search.everywhere.popup" timestamp="1591706421010">
+    <state x="431" y="186" width="672" height="678" key="search.everywhere.popup" timestamp="1591715273449">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state x="431" y="186" width="672" height="678" key="search.everywhere.popup/0.30.1536.834@0.30.1536.834" timestamp="1591706421010" />
+    <state x="431" y="186" width="672" height="678" key="search.everywhere.popup/0.30.1536.834@0.30.1536.834" timestamp="1591715273449" />
   </component>
 </project>
